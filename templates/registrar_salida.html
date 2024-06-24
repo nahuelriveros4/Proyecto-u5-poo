@@ -1,0 +1,21 @@
+{% extends "base_template.html" %}
+{% block title %}Transporte{% endblock %}
+{% block content %}
+    <div class="container">
+        <h1>Transporte LogiPack</h1>
+        <h3>Seleccione Sucursal de destino</h3>
+        <form action="{{ url_for('seleccionar_sucursal2', sucursalOrigen_id = sucursalOrigen.id) }}" method="POST" class="select-sucursal-form">
+            <label for="sucursales">Sucursal Origen {{sucursalOrigen.numero}} - {{ sucursalOrigen.provincia }} - {{sucursalOrigen.localidad}}</label> <br>
+            <select id="sucursales" name="sucursales">
+                {% for sucursal in sucursales %}
+                    <option value="{{ sucursal.id }}">{{ sucursal.numero }} - {{ sucursal.provincia }} - {{sucursal.localidad}}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-success">Seleccionar</button>
+        </form>
+        <div class="volver">
+            <a href = "{{ url_for('acceso_gestion', sucursal_id = sucursalOrigen.id) }}" > Volver al Menu </a>
+        </div>	
+    </div>
+    
+{% endblock %}

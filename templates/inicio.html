@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogiPack</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>LogiPack</h1>
+        <h4>¡Bienvenido!, seleccione para operar:</h4>
+        <form action="{{ url_for('acceso') }}">
+            <button type="submit" class="despachante-btn">Despachante</button>
+        </form>
+    </div>
+</body>
+</html>

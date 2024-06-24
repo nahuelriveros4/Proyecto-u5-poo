@@ -1,0 +1,297 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, h4 {
+    color: #343a40;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #495057;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button.btn {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}
+
+.alert {
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.myDiv {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.myDiv a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.myDiv a:hover {
+    color: #0056b3;
+}
+
+/* Estilos para los elementos li en acceso_gestion.html */
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Centrar los elementos dentro del ul */
+}
+
+ul li {
+    display: block; /* Hacer que los li sean bloques */
+    background-color: #007bff;
+    color: #ffffff;
+    margin: 10px auto; /* Centrarlos y agregar margen arriba y abajo */
+    padding: 15px 30px; /* Ajustar el padding para un mejor centrado */
+    border-radius: 4px;
+    width: 80%; /* Hacer que no ocupen todo el ancho */
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+}
+
+ul li:hover {
+    background-color: #0056b3;
+}
+
+ul li a:hover {
+    color: #ffffff;
+}
+
+/* Estilos para el botón de Despachante en inicio.html */
+button.despachante-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+}
+
+button.despachante-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos adicionales para error.html */
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Estilos adicionales para acceso.html */
+.select-sucursal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.select-sucursal-form select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.select-sucursal-form button {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.select-sucursal-form button:hover {
+    background-color: #218838;
+}
+
+/* Estilos para seleccionar_paquetes.html */
+.select-sucursal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.select-sucursal-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #495057;
+}
+
+.select-sucursal-form select {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.select-sucursal-form input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.select-sucursal-form button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.select-sucursal-form button:hover {
+    background-color: #0056b3;
+}
+
+.select-sucursal-form .alert {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilos para los botones de "Volver al Menú" y "Volver al Inicio" */
+.volver {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.volver a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.volver a:hover {
+    background-color: #0056b3;
+}
+
+
+.myDiv{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.myDiv a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.myDiv a:hover {
+    background-color: #0056b3;
+}

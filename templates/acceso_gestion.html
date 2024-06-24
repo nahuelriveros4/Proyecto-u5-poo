@@ -1,0 +1,12 @@
+{% extends "base_template.html" %}
+{% block title %} Gestion Paquetes {% endblock %}
+{% block content %}
+    <h1>Gestion LogiPack</h1>
+    <h2>Seleccione Opcion</h2>
+    <h4>Se encuentra en la sucursal {{sucursal.numero}} - {{sucursal.provincia}}, {{sucursal.localidad}}, {{sucursal.direccion}} </h4>
+    <ul>
+        <li><a href="{{ url_for('registrar_paquete', sucursal_id=sucursal.id) }}">Registrar recepcion de paquete</a></li>
+        <li><a href="{{ url_for('registrar_salida_transporte', sucursal_id=sucursal.id) }}">Registrar salida de transporte</a></li>
+        <li><a href="{{ url_for('registrar_llegada_transporte', sucursal_id=sucursal.id) }}">Registrar llegada de transporte</a></li>
+    </ul>
+{% endblock %}

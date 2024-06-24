@@ -1,0 +1,17 @@
+{% extends "base_template.html" %}
+{% block title %}Gestion{% endblock %}
+{% block content %}
+    <div class="container">
+        <h1>Gestion LogiPack</h1>
+        <h3>Seleccione Sucursal</h3>
+        <form action="{{ url_for('seleccionar_sucursal') }}" method="POST" class="select-sucursal-form">
+            <label for="sucursales">Sucursales</label> <br>
+            <select id="sucursales" name="sucursales">
+                {% for sucursal in sucursales %}
+                    <option value="{{ sucursal.id }}">{{ sucursal.numero }} - {{ sucursal.provincia }} - {{sucursal.localidad}}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-success">Acceder</button>
+        </form>
+    </div>
+{% endblock %}

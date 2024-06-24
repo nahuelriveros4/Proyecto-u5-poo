@@ -10,11 +10,8 @@ class Sucursal(db.Model):
     provincia = db.Column(db.String(30), nullable=False)
     localidad = db.Column(db.String(30), nullable=False)
     direccion= db.Column(db.String(60), nullable=False)
-    # Relación uno a muchos con Repartidor
     idrepartidor = db.relationship('Repartidor', backref='sucursal', cascade="all,delete-orphan")
-    # Relación uno a muchos con Paquete
     paquetes = db.relationship('Paquete', backref='sucursal', cascade="all,delete-orphan")
-    # Relación uno a muchos con Transporte
     transportes = db.relationship('Transporte', backref='sucursal', cascade="all,delete-orphan")
 
 class Repartidor(db.Model):
@@ -23,7 +20,6 @@ class Repartidor(db.Model):
     nombre = db.Column(db.String(50), nullable=False)
     dni = db.Column(db.String(20), unique=True, nullable=False)
     idsucursal = db.Column(db.Integer, db.ForeignKey('sucursal.id'))
-    # Relación uno a muchos con Paquete
     paquetes = db.relationship('Paquete', backref='repartidor', cascade="all,delete-orphan")
 
 class Paquete(db.Model):
@@ -46,6 +42,5 @@ class Transporte(db.Model):
     fechahorasalida= db.Column(db.DateTime)
     fechahorallegada= db.Column(db.DateTime)
     idsucursal = db.Column(db.Integer, db.ForeignKey('sucursal.id'))
-    # Relación uno a muchos con Paquete
     paquetes = db.relationship('Paquete', backref='transporte', cascade="all,delete-orphan")
 
